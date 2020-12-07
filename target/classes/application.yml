@@ -1,0 +1,40 @@
+
+server:
+    port: 8080
+#    servlet:
+##        context-path: /api/v1
+
+springfox:
+    documentation:
+        swagger:
+            v2:
+                path: /api-docs
+
+spring:
+    application:
+        name: plans
+
+management:
+    endpoint:
+        health:
+            show-details: always
+    health:
+        diskspace:
+            enabled: false
+    endpoints:
+        web:
+            exposure:
+                include: health
+            base-path: '/'
+            path-mapping:
+                prometheus: metrics
+logging:
+    pattern:
+        console: "%d{yyyy-MM-dd HH:mm:ss.SSS} %highlight(%-5level) %magenta([%t]) %m%n"
+    level:
+        org:
+            springframework:
+                data:
+                    mongodb:
+                        core:
+                            MongoTemplate: DEBUG
