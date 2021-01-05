@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 public class TariffService {
 
     public double findTaxForPlans(final DDDType origin, final DDDType destiny) {
-        Tariff tariff = new Tariff(origin, destiny);
+        final var tariff = new Tariff(origin, destiny);
         return tariff.getTax();
     }
 

@@ -1,11 +1,12 @@
 package br.com.vivo.api.plans.infra.dto;
 
 import br.com.vivo.api.plans.domain.plans.PlansType;
-import br.com.vivo.api.plans.domain.taxs.DDDType;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import br.com.vivo.api.plans.infra.annotation.NotNullOrNotEmpty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Builder;
 import lombok.Getter;
+
+import javax.validation.constraints.NotBlank;
 
 /**
  * Class comments go here...
@@ -13,20 +14,32 @@ import lombok.Getter;
  * @author André Franco
  * @version 1.0 05/12/2020
  */
-@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonPropertyOrder({"minutes", "origin", "destiny", "type"})
 @Builder
 @Getter
 public class PainelRequest {
 
-    private int minutes;
+    @ApiModelProperty(
+        example = "30",
+        required = true
+    )
+    private final int minutes;
 
-    @NotNullOrNotEmpty(message = "Para o cálculo, é necessário informar o DDD de origem")
-    final String origin;
+    @ApiModelProperty(
+        example = "011",
+        required = true
+    )
+    @NotBlank(message = "Para o cálculo, é necessário informar o DDD de origem")
+    private final String origin;
 
-    @NotNullOrNotEmpty(message = "Para o cálculo, é necessário informar o DDD de destino")
-    final String destiny;
+    @ApiModelProperty(
+        example = "016",
+        required = true
+    )
+    @NotBlank(message = "Para o cálculo, é necessário informar o DDD de destino")
+    private final String destiny;
 
-    final PlansType type;
+    private final PlansType type;
 
 
 }

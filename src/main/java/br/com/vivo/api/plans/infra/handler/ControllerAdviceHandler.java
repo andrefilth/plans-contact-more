@@ -1,7 +1,7 @@
 package br.com.vivo.api.plans.infra.handler;
 
 import br.com.vivo.api.plans.infra.extractor.NotValidExceptionToErroRespondeExtractor;
-import br.com.vivo.api.plans.infra.handler.exception.badrequest.BadRequestException;
+import br.com.vivo.api.plans.infra.handler.exception.badRequest.BadRequestException;
 import br.com.vivo.api.plans.infra.handler.model.ErrorModel;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.MethodArgumentNotValidException;

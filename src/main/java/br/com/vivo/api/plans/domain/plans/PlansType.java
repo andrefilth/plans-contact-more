@@ -9,7 +9,7 @@ import lombok.AllArgsConstructor;
  * @version 1.0 05/12/2020
  */
 @AllArgsConstructor
-public enum PlansType implements Calculator {
+public enum PlansType  {
 
     TALK_MORE_30(30){
         @Override
@@ -42,6 +42,8 @@ public enum PlansType implements Calculator {
     };
 
     public int time;
+
+    public abstract double calculate(final int minute, final double value);
 
 
 }

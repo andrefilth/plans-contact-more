@@ -16,9 +16,9 @@ public class Tariff {
     private static final double TWO_SEVEN = 1.7;
     private static final double TWO_NINE = 2.9;
     private static final double ZERO_NINETY = 0.9;
-    private String origin;
+    private final String origin;
 
-    private String destiny;
+    private final String destiny;
 
 
     /**

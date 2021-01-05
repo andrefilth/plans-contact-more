@@ -21,12 +21,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class PainelWrapper {
 
-    private final TariffService tariffService;
+    private final TariffService tariffEnabled;
+
     public PainelResponse calculate(final PainelRequest request) {
 
         final DDDType origin = DDDType.getTypeByDescrition(request.getOrigin());
         final DDDType destiny = DDDType.getTypeByDescrition(request.getDestiny());
-        final double tariffForPlan = tariffService.findTaxForPlans(origin, destiny);
+        final double tariffForPlan = tariffEnabled.findTaxForPlans(origin, destiny);
 
         final var withPlan = new ConnectionCostWithPlan(request.getMinutes(), tariffForPlan, request.getType());
         final var withoutPlan = new ConnectionCostWithoutPlan(request.getMinutes(), tariffForPlan);

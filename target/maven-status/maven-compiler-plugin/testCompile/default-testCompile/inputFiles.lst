@@ -1,1 +1,5 @@
-/Users/andrefranco/plans-contact-more/src/test/java/br/com/vivo/api/plans/BaseTest.java
+/Users/andrefranco/git/plans-contact-more/src/test/java/br/com/vivo/api/plans/restapi/PainelControllerIntegrationEndpointTest.java
+/Users/andrefranco/git/plans-contact-more/src/test/java/br/com/vivo/api/plans/restapi/BeanValidationIntegrationIntegrationTest.java
+/Users/andrefranco/git/plans-contact-more/src/test/java/br/com/vivo/api/plans/restapi/PainelControllerIntegrationIntegrationTest.java
+/Users/andrefranco/git/plans-contact-more/src/test/java/br/com/vivo/api/plans/BaseIntegrationTest.java
+/Users/andrefranco/git/plans-contact-more/src/test/java/br/com/vivo/api/plans/application/PainelWrapperTest.java

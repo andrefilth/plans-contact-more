@@ -3,7 +3,7 @@ package br.com.vivo.api.plans.restapi;
 import br.com.vivo.api.plans.application.PainelWrapper;
 import br.com.vivo.api.plans.infra.dto.PainelRequest;
 import br.com.vivo.api.plans.infra.dto.PainelResponse;
-import br.com.vivo.api.plans.infra.handler.exception.badrequest.UndefinedDDDTypeException;
+import br.com.vivo.api.plans.infra.handler.exception.badRequest.UndefinedDDDTypeException;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
@@ -40,7 +40,7 @@ public class PainelController {
     })
     @ResponseStatus(OK)
     @PostMapping("calculation")
-    public PainelResponse createToken(@RequestBody @Valid final PainelRequest request) {
+    public PainelResponse calculation(@RequestBody @Valid final PainelRequest request) {
 
         return wrapper.calculate(request);
     }

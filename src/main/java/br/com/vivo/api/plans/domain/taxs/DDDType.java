@@ -1,6 +1,6 @@
 package br.com.vivo.api.plans.domain.taxs;
 
-import br.com.vivo.api.plans.infra.handler.exception.badrequest.UndefinedDDDTypeException;
+import br.com.vivo.api.plans.infra.handler.exception.badRequest.UndefinedDDDTypeException;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
