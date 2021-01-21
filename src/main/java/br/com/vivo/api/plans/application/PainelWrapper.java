@@ -1,7 +1,8 @@
 package br.com.vivo.api.plans.application;
 
-import br.com.vivo.api.plans.domain.plans.objetcValue.ConnectionCostWithPlan;
-import br.com.vivo.api.plans.domain.plans.objetcValue.ConnectionCostWithoutPlan;
+import br.com.vivo.api.plans.domain.plans.Connection;
+import br.com.vivo.api.plans.domain.plans.ConnectionCostWithPlan;
+import br.com.vivo.api.plans.domain.plans.ConnectionCostWithoutPlan;
 import br.com.vivo.api.plans.domain.taxs.DDDType;
 import br.com.vivo.api.plans.domain.taxs.services.TariffService;
 import br.com.vivo.api.plans.infra.dto.PainelRequest;
@@ -29,8 +30,8 @@ public class PainelWrapper {
         final DDDType destiny = DDDType.getTypeByDescrition(request.getDestiny());
         final double tariffForPlan = tariffEnabled.findTaxForPlans(origin, destiny);
 
-        final var withPlan = new ConnectionCostWithPlan(request.getMinutes(), tariffForPlan, request.getType());
-        final var withoutPlan = new ConnectionCostWithoutPlan(request.getMinutes(), tariffForPlan);
+        final Connection withPlan = new ConnectionCostWithPlan(request.getMinutes(), tariffForPlan, request.getType());
+        final Connection withoutPlan = new ConnectionCostWithoutPlan(request.getMinutes(), tariffForPlan);
 
         return PainelResponse
             .builder()

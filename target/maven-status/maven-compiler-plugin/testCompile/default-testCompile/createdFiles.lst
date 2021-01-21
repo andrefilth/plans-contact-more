@@ -1,5 +1,5 @@
-br/com/vivo/api/plans/restapi/PainelControllerIntegrationIntegrationTest.class
-br/com/vivo/api/plans/restapi/PainelControllerIntegrationEndpointTest.class
-br/com/vivo/api/plans/BaseIntegrationTest.class
-br/com/vivo/api/plans/restapi/BeanValidationIntegrationIntegrationTest.class
-br/com/vivo/api/plans/application/PainelWrapperTest.class
+br\com\vivo\api\plans\restapi\BeanValidationIntegrationIntegrationTest.class
+br\com\vivo\api\plans\BaseIntegrationTest.class
+br\com\vivo\api\plans\restapi\PainelControllerIntegrationIntegrationTest.class
+br\com\vivo\api\plans\application\PainelWrapperTest.class
+br\com\vivo\api\plans\restapi\PainelControllerIntegrationEndpointTest.class

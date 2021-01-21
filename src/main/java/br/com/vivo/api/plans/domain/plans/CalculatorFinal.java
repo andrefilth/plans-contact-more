@@ -1,4 +1,4 @@
-package br.com.vivo.api.plans.domain.plans.objetcValue;
+package br.com.vivo.api.plans.domain.plans;
 
 /**
  * Class comments go here...
